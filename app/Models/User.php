@@ -48,8 +48,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(post::class);
     }
-    public function answers()
-    {
-        return $this->hasOne(answers::class);
-    }
+    // public function answers()
+    // {
+    //     return $this->hasMany(answers::class);
+    // }
 }

@@ -22,9 +22,10 @@ class PostController extends Controller
     {
         // $post = Post::all();
 
-        $user = Auth::user();
+        // $user = Auth::user();
 
-        $post = $user->post;
+        // $post = $user->post;
+        $post = Post::all();
         return view('post.index', compact('post'));
     }
 

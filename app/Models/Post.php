@@ -18,4 +18,7 @@ class Post extends Model
     public function tags(){
         return $this->belongsToMany(Tag::class,'post_tag','post_id','tag_id');
     }
+    public function answers(){
+        return $this->hasMany(Answer::class);
+    }
 }

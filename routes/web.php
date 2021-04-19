@@ -2,6 +2,7 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\PostController;
+    use App\Http\Controllers\AnswersController;
     /*
     |--------------------------------------------------------------------------
     | Web Routes
@@ -26,6 +27,7 @@
     });
 
 
+    // pertanyaan
         // Route::get('/post/create',[App\Http\Controllers\PostController::class,'create']);
         // Route::post('/post/store',[App\Http\Controllers\PostController::class,'store']);
         // Route::get('/post',[App\Http\Controllers\PostController::class,'index']);
@@ -36,6 +38,10 @@
 
         Route::resource('post', PostController::class);
 
+        // jawaban
+        Route::get('/answers',[AnswersController::class , 'index']);
+        Route::get('/answers/create',[AnswersController::class , 'create']);
+        Route::post('/answers',[AnswersController::class , 'store']);
 
     Auth::routes();
 
